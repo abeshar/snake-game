@@ -20,8 +20,8 @@ Installation & Configuration
 
 Clone the course repository:
 
-git clone https://github.com/MSAlateeq/COSC-3411.git
-cd COSC-3411/Snake-Game
+git clone https://github.com/abeshar/snake-game
+cd snake-game
 
 Make the game file executable (optional):
 
