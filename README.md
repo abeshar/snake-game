@@ -25,20 +25,20 @@ cd snake-game
 
 Make the game file executable (optional):
 
-chmod +x snake_game.py
+chmod +x snake.py
 
 The game configuration (play area size, speed, colors) is defined at the top
 of snake_game.py in constants.
 
 How to Run
 
-From the Snake-Game directory:
+From the snake-game directory:
 
-python3 snake_game.py
+python3 snake.py
 
 or, if you made it executable:
 
-./snake_game.py
+./snake.py
 
 Controls
 
@@ -54,8 +54,8 @@ Usage Example
 
 Open a terminal:
 
-cd COSC-3411/Snake-Game
-python3 snake_game.py
+cd Snake-Game
+python3 snake.py
 
 
 Use the arrow keys to move the snake.
