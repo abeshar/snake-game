@@ -28,6 +28,9 @@ sc.bgcolor("gray")
 sc.setup(width=1200, height=1200)
 sc.tracer(0)
 
+
+
+
 # ----------------- BORDER -----------------
 border = turtle.Turtle()
 border.speed(0)
@@ -49,25 +52,21 @@ names_writer.speed(0)
 names_writer.color("white")
 names_writer.penup()
 names_writer.hideturtle()
-names_writer.goto(0, TOP + 250)
+names_writer.goto(0 ,TOP + 250)  
 
-# ✅ fixed missing parenthesis
-names_writer.write(
-    "Snake Game",
-    align="center",
-    font=("candara", 28, "normal")
+names_writer.write("Snake Game",align="center",font=("candara", 28, "normal")
+
+#names_writer.goto(-570, TOP + 250) 
+#names_writer.write(
+   # "Group Members:\n"
+   # "1) Mohammed H AlAteeq - 202200239\n"
+   # "2) Abdurhman S Albeshar - 202002950\n"
+   # "3) Mohammad T Alotaishan - 202301935\n"
+   # "4) Mahdi M Bayleh - 201901622\n"
+   # "5) ",
+   # align="left",
+   # font=("candara", 14, "normal")
 )
-
-names_writer.goto(-570, TOP + 250) 
-names_writer.write(
-   "Group Members:\n"
-   "1) Mohammed H AlAteeq - 202200239\n"
-   "2) Abdurhman S Albeshar - 202002950\n"
-   "3) Mohammad T Alotaishan - 202301935\n"
-   "4) Mahdi M Bayleh - 201901622\n"
-   "5) Abdullmohsin Bawazeer - 202001600\n",
-   align="left",
-   font=("candara", 14, "normal"))
 
 # ----------------- SCORE (TOP CENTER) -----------------
 p = turtle.Turtle()
@@ -76,12 +75,9 @@ p.shape("square")
 p.color("white")
 p.penup()
 p.hideturtle()
-p.goto(0, TOP + 80)
-p.write(
-    "Score : 0  High Score : 0",
-    align="center",
-    font=("candara", 24, "bold")
-)
+p.goto(0, TOP + 80)                 
+p.write("Score : 0  High Score : 0",
+        align="center", font=("candara", 24, "bold"))
 
 # ----------------- SNAKE & FOOD -----------------
 h = turtle.Turtle()
@@ -99,6 +95,7 @@ f.penup()
 f.goto(0, TOP - 50)
 
 seg = []   # body segments list
+
 
 # ----------------- CONTROLS -----------------
 def up():
@@ -152,11 +149,8 @@ def reset_game():
     d = 0.1
 
     p.clear()
-    p.write(
-        f"Score : {s}  High Score : {hs}",
-        align="center",
-        font=("candara", 24, "bold")
-    )
+    p.write(f"Score : {s}  High Score : {hs}",
+            align="center", font=("candara", 24, "bold"))
 
 
 # ----------------- KEY BINDINGS -----------------
@@ -203,11 +197,8 @@ try:
                 hs = s
 
             p.clear()
-            p.write(
-                f"Score : {s}  High Score : {hs}",
-                align="center",
-                font=("candara", 24, "bold")
-            )
+            p.write(f"Score : {s}  High Score : {hs}",
+                    align="center", font=("candara", 24, "bold"))
 
         # move segments
         for i in range(len(seg) - 1, 0, -1):
@@ -229,6 +220,6 @@ try:
 
         time.sleep(d)
 
-except:
+except turtle.Terminator:
     # window closed; exit cleanly
     pass
